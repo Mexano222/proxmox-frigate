@@ -1,5 +1,14 @@
 #!/usr/bin/env bash
 
+source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
+color
+verb_ip6
+catch_errors
+setting_up_container
+network_check
+update_os
+
+
 msg_info "Installing Docker"
 bash -c "$(wget -qLO - https://raw.githubusercontent.com/Mexano222/proxmox-frigate/main/install/docker.sh)" || exit
 msg_ok "Installed Docker"
