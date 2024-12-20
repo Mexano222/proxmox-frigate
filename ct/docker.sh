@@ -1,19 +1,19 @@
 #!/usr/bin/env bash
-source <(curl -s https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)
+source <(curl -s https://raw.githubusercontent.com/Mexano222/proxmox-frigate/main/misc/build.func)
 # Copyright (c) 2021-2024 tteck
 # Author: tteck (tteckster)
 # License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
 # Source: https://www.docker.com/
 
 # App Default Values
-APP="Docker"
-var_tags="docker"
+APP="frigate"
+var_tags="frigate"
 var_cpu="2"
-var_ram="2048"
-var_disk="4"
+var_ram="4096"
+var_disk="20"
 var_os="debian"
 var_version="12"
-var_unprivileged="1"
+var_unprivileged="0"
 
 # App Output & Base Settings
 header_info "$APP"
