@@ -805,7 +805,7 @@ EOF
   pct start "$CTID"
   msg_ok "Started LXC Container"
 
-  lxc-attach -n "$CTID" -- bash -c "$(wget -qLO - https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/install/$var_install.sh)"  || exit
+  lxc-attach -n "$CTID" -- bash -c "$(wget -qLO - https://raw.githubusercontent.com/Mexano222/proxmox-frigate/main/install/$var_install.sh)"  || exit
 }
 
 # This function sets the description of the container.
