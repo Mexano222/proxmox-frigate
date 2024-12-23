@@ -8,14 +8,14 @@ setting_up_container
 network_check
 update_os
 
-msg_info "Installing Docker"
+echo "Installing Docker"
 bash -c "$(wget -qLO - https://raw.githubusercontent.com/Mexano222/proxmox-frigate/main/install/docker.sh)" || exit
-msg_ok "Installed Docker"
+echo "Installed Docker"
 
-msg_info "Installing Nvidia drivers"
+echo "Installing Nvidia drivers"
 bash -c "$(wget -qLO - https://raw.githubusercontent.com/Mexano222/proxmox-frigate/main/install/nvidia.sh)" || exit
-msg_ok "Installed Nvidia drivers"
+echo "Installed Nvidia drivers"
 
-msg_info "Installing Frigate container"
+echo "Installing Frigate container"
 bash -c "$(wget -qLO - https://raw.githubusercontent.com/Mexano222/proxmox-frigate/main/install/frigate.sh)" || exit
-msg_ok "Installed Frigate container"
+echo "Installed Frigate container"
