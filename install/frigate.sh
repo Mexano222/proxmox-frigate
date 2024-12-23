@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 cd /opt
 
 mkdir /opt/frigate
@@ -87,7 +86,6 @@ services:
     privileged: true
     restart: unless-stopped
     image: ghcr.io/blakeblackshear/frigate:stable-tensorrt
-    runtime: nvidia
     shm_size: "128mb" # update for your cameras based on calculation above
     deploy:
       resources:
