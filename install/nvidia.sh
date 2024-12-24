@@ -1,9 +1,12 @@
 #!/usr/bin/env bash
 source /dev/stdin <<<"$FUNCTIONS_FILE_PATH"
 
-wget https://us.download.nvidia.com/XFree86/Linux-x86_64/565.57.01/NVIDIA-Linux-x86_64-565.57.01.run
-chmod +x NVIDIA-Linux-x86_64-565.57.01.run
-./NVIDIA-Linux-x86_64-565.57.01.run --no-kernel-module
+wget https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/cuda-keyring_1.1-1_all.deb
+sudo dpkg -i cuda-keyring_1.1-1_all.deb
+sudo add-apt-repository contrib
+sudo apt-get update
+sudo apt-get -y install cuda-toolkit-12-6
+sudo apt-get install -y cuda-drivers
 
 msg_info "Cleaning up"
 $STD apt-get -y autoremove
